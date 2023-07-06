@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_filters %}
+
+{% block title %}Sine Up{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+
+        {{ form|crispy }}
+        <p>Have an account? Login <a href="/login">Hear</a>!</p>
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+{% endblock %}
